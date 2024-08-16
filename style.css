@@ -14,6 +14,14 @@ body{
     /* background-color: yellow !important; */
     color: #fff !important;
 }
+nav h1 a{
+    text-decoration: none;
+    color:#fff;
+}
+nav h1 a:hover {
+    text-decoration: none;
+    color: #fff;
+}
 
  #text-display {
      font-size: 24px;
