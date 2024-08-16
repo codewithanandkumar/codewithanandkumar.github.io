@@ -1,0 +1,595 @@
+/* header Section*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins','sans-serif';
+    box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;
+}
+body{
+    background-color: #080808 !important;
+    /* background-color: yellow !important; */
+    color: #fff !important;
+}
+
+ #text-display {
+     font-size: 24px;
+     font-weight: bold;
+     display: inline-block;
+     color: #ff004f;
+     /* white-space: pre; */
+ }
+ 
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Anand.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%; /* top-botoom & left-right*/
+
+}
+
+
+nav{
+    display: flex !important;;
+    align-items: center !important;;
+    justify-content:space-between !important;;
+    flex-wrap: wrap !important;;
+}
+.logo{
+    width: 250px;
+    height: 110px;
+}
+nav ul li{
+    display: inline-block !important;;
+    list-style-type: none !important;;
+    margin: 10px 20px !important;; 
+}
+nav ul li a{
+    color:#fff !important;;
+    text-decoration: none !important;;
+    font-size: 18px !important;;
+    position: relative !important;;
+}
+nav ul li a::after{
+    content: '' !important;;  /*content will be empty*/
+    width: 0 !important;;
+    height: 3px !important;;
+    background:#ff004f !important;;
+    position:absolute !important;; /*here we are using absolute then befor we have to use relative*/
+    left:0 !important;;/* if i will not add left will 0 then after anchor text line will generate. */
+    bottom: -6px !important;;/* if bottom will not assigned then top of the line will show*/
+    transition: 0.5s !important;;/*it will take 5 second to complete the operation */
+}
+
+/* when user will hover then width will 100% and given attributes will apply*/
+nav ul li a:hover::after{
+    content: ' ' !important;;  /*content will be empty*/
+    width: 100% !important;;
+    height: 3px !important;;
+    background:#ff004f !important;;
+    position:absolute !important;; /*here we are using absolute then befor we have to use relative*/
+    left:0 !important;;/* if i will not add left will 0 then after anchor text line will generate. */
+    bottom: -6px !important;;/* if bottom will not assigned then top of the line will show*/
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+/*bcz we have another h1*/
+.header-text h1{
+    font-size: 60px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+.header-text h1 span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+
+
+/*completed header section*/
+
+
+
+/*-----------------------------------------------About*-------------------------------------------------------*/
+
+#about{
+    padding: 80px 0; /*top-bottom left-right*/
+    /* color: #ababab; */
+    color: black;
+    background-color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;/*the width of the column will be 35%*/
+   
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;/*first column width is 35% and this second column width is 60% means both colmun gap will be 5%*/
+}
+
+.sub-title{
+    font-size: 40px;
+    font-weight: 600;
+    color:#fff;
+}
+
+
+/* tab titles*/
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;/*top, left-right bottom*/
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.tab-links::after{
+    content: ' ';
+    width: 0;
+    height: 3px;/*as we added in navigation menu*/
+    background-color: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-content ul li{
+    margin: 10px 0;/*top-bottom left-right*/
+    list-style-type: none;
+}
+.tab-content ul li span{
+    color:#b54769;
+    font-size: 14px;
+}
+.tab-content{
+    display: none;
+}
+
+.tab-content.active-tab{
+    display: block;/*so it is visible*/
+
+}
+
+
+
+/*-----------------------------------------------Services-------------------------------------------------------*/
+
+#services{
+    padding: 30px 0;/*top-bottom left-right*/
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*250px 1fraction*/
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size:13px;
+    font-weight:300;
+    border-radius:10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list i{
+    font-size:50px;
+    margin-bottom: 30px;
+}
+
+.services-list h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list a{
+    text-decoration: none;
+    color:#fff;
+    font-size:12px;
+    margin-top:20;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);/*it will move the box by 10px*/
+}
+
+
+/*-----------------------------------------------Portfolio-------------------------------------------------------*/
+
+
+#portfolio{
+    padding: 50px 0px;
+    background-color: white !important;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*250px 1fraction*/
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 1px 10px black;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5%;
+}
+
+.layer
+{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);/*black color with 60% opacity*/
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;/*adding space*/
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{/*whenver mouse will hover on work image size will increase.*/
+    transform:scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block !important;
+    margin: 50px auto !important;
+    width: fit-content !important;
+    /* border: 1px solid #ff004f !important; */
+    padding: 14px 50px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    color: #fff !important;
+    background-color: #080808;
+    transition: background 0.5s !important;/*transition for the background*/
+}
+.btn:hover{
+    background: #ff004f !important;
+
+}
+
+/*-----------------------------------------------Contact-------------------------------------------------------*/
+
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);/*move the icon*/
+}
+
+.btn2{
+    display: inline-block;
+    background-color: #ff004f;
+
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin:15px 0;
+    color:#fff;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding:25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color:#ff004f;
+}
+
+
+
+
+
+/*
+    
+    .to-top{
+        background:white;
+        position: fixed;
+        bottom: 16px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color:#ff004f;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .4s;
+
+    }
+    .to-top.active {
+        bottom:32px;
+        pointer-events: auto;
+        opacity: 1;
+    }
+*/
+/*-----------------------------------------------Media quere Css for small screen---------------------------------------*/
+
+nav .fa-solid{
+display: none;
+}
+@media only screen and (max-width:600px) {
+    #header{
+        background-image: url(images/Anand2.png);
+        /* background-color: #ff004f; */
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        }
+        
+        nav ul{
+            background: #ff004f;
+            position: fixed;
+            top:0;
+            right:-200px;/*bcz width is 200px thats why to hide the menu* so it will be move to right side and become hidden*/
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+        }
+        nav ul li{
+            display: block !important;
+            margin:25px;
+        }
+
+        nav ul .fa-solid{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        .sub-title{
+            font-size: 40px;
+        }
+        .about-col-1, .about-col-2{
+            flex-basis: 100%;
+        }
+        .about-col-1{
+            margin-bottom: 30px;
+        }
+        .about-col-2{
+            font-size: 14px;
+        }
+        .tab-links{
+            font-size: 16px;
+            margin-right: 20px;
+        }
+        .contact-left, .contact-right{
+            flex-basis: 100%;
+        }
+        .copyright{
+            font-size: 14px;
+        }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+
+
+/* Git Status */
+
+#git-cont
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;   
+    
+}
+
+
+
+
+
+
+/* Start Certificate & Achivements*/
+
+.container-crousel {
+    padding: 10px 10%;
+    /* top-botoom & left-right*/
+
+}
+.container-crousel .sub-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.container-adjust{
+  padding: 5px 20%;
+}
+
+
+#achievements
+{
+    background-color: white;
+    color:black !important;
+}
+
+
+
+
+
+
+
+#carouselCounter
+{
+    font-weight: 600;
+    color: #ff004f;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.counter {
+    text-align: center;
+    margin-bottom: 10px;
+    /* Space between counter and carousel */
+    font-size: 18px;
+}
+
+.carousel-indicators {
+    position: relative;
+    bottom: -50px;
+    /* Adjust this value as needed */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+    background-color: #181010;
+    border: 1px solid red !important;
+}
+
+.carousel-indicators .active {
+    background-color: red !important;
+    
+}
