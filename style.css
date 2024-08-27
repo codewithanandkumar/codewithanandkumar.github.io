@@ -475,6 +475,9 @@ display: none;
             padding-top: 50px;
             z-index: 2;
         }
+     #sidemenu span{
+            visibility: hidden;
+        }
         nav ul li{
             display: block !important;
             margin:25px;
